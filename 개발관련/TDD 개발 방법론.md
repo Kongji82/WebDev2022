@@ -28,3 +28,63 @@ TDD란 Test Driven Development의 약자로 ‘테스트 주도 개발’이라�
 
 개인적으로 테스트 코드 없이 개발을 하면서, 새로운 기능을 추가하고 프로젝트의 규모가 커질때마다 코드를 나 자신이 일일이 테스트를 진행하게 되었고, 당장 눈에 보이지 않는 오류가 후에 다른 기능을 개발할 때 나타나게 되었다.
 후에는 기능 하나를 테스트 하기위해 많은 시간을 들이게 되었고, 테스트 자동화의 필요성을 느끼게 되었다.
+
+## JUnit
+Junit은 자바 프로그래밍 언어용 단위 테스트 프레임워크이다.
+어노테이션을 기반을 테스트를 지원한다.
+단정문(Assert)를 통해서 테스트 케이스의 기대값에 대해 수행 결과를 화인할 수 있다.
+Junit5는 크게 Jupiter, Platform, Vintage 모듈로 구성되어있다.
+
+### Junit Jupiter
+
+- TestEngine API 구현체 - JUnit5를 구현하고 있음
+
+### Junit Platform
+
+- test를 실행하기 위한 뼈대
+각종 IDE를 연동을 보조하는 역할
+
+### Junit Vintage
+
+- TestEngine 구현체 JUnit 3, 4를 구현하고 있음
+JUnit 3,4 버전으로 작성된 테스트 코드를 실행할 때 사용됨
+
+## Junit 사용설정
+``` gradle
+dependencies {
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+```
+
+## Junit 어노테이션 알아보기
+
+- Junit 5는 아래와 같은 테스트 라이프 사이클을 가지고 있다.
+
+
+Annotation
+Description
+
+
+@Test:
+테스트용 메소드를 표현하는 어노테이션
+
+
+@BeforEach:
+각 테스트 메소드가 시작되기 전에, 실행되어야 하는 메소들 표현
+
+
+@AfterEach:
+각 테스트 메소드가 시작된 후 실행되어야 하는 메소드르 표현
+
+
+@BeforeAll:
+테스트 시작 전에 실행되어야 하는 메소드를 표현(Static 처리 필요)
+
+
+@AfterAll:
+테스트 종료 후에 실행되어야 하는 메소드를 표현(Static 처리 필요)
