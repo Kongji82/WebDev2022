@@ -1,4 +1,4 @@
-ㄹ# TDD (Test-Driven-Development)
+# TDD (Test-Driven-Development)
 TDD란 Test Driven Development의 약자로 ‘테스트 주도 개발’이라고 한다.
 
 테스트 주도 개발(TDD)은 설계 이후 코드 개발 및 테스트케이스를 작성하는 기존의 개발 프로세스와 다르게 테스트케이스를 작성 한 후 실제 코드를 개발하여 리펙토링하는 절차를 따른다. 이러한 이유로 TDD를 Test First Development라고도 한다.
