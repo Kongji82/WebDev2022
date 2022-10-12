@@ -25,7 +25,7 @@ payload에는 Claim이라는 사용자에 대한, 혹은 토큰에 대한 proper
 Claim은 토큰에서 사용할 정보의 조각같은 개념
 claim에 어떤 정보를 넣을지는 표준을 참고해서 넣는다.
 
-## Registed claims : 미리 정의된 클레임.
+### Registed claims : 미리 정의된 클레임
 - iss(Issuer; 발행자)
 - sub(Subject; 제목)
 - aud(Audience; 토큰 대상자)
