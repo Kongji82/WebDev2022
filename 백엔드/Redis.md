@@ -16,6 +16,26 @@ DB가 있음에도 레디스를 사용하는 이유가 있다.
 ## 레디스 자료구조
 레디스가 다른 In-Memory 데이터베이스와의 가장 큰 차이점은 큰 차이점은 다양한 자료구조 를 지원한다는 것이다. 레디스는 기본적으로 String, Bitmap, Hash, List, Set, Sorted Set 를 제공했고, 버전이 올라가면서 현재는 Geospatial Index, Hyperloglog, Stream 등의 자료형도 지원하고 있다. 레디스는 다양한 자료구조를 제공함으로 개발의 편의성 증대와 난이도를 더욱 쉽게 해준다.
 
+### String
+레디스의 string은 키와 연결할 수 있는 가장 간단한 유형의 값이다. 레디스의 키가 문자열이므로 이 구조는 문자열을 다른 문자열에 매핑하는 것이라고 볼 수 있다.  
+string 타입에는 모든 종류의 문자열(이진 데이터 포함) 을 저장할 수 있다. 따라서 JPEG 이미지를 저장하거나, HTML fragment 를 캐시하는 용도로 자주 사용한다. 저장할 수 있는 최대 사이즈는 512MB이다. string은 가장 기본적인 자료구조이기 때문에 다음과 같은 다양한 기능을 제공한다.
+- string을 정수로 파싱하고, 이를 atomic하게 증감하는 커맨드
+``` terminal
+> set counter 100
+OK
+
+> incr counter
+(integer) 101
+
+> incr counter
+(integer) 102
+
+f> incrby counter 50
+(integer) 152
+```
+
+
+
 ## Reference
 https://wildeveloperetrain.tistory.com/21  
 https://brunch.co.kr/@skykamja24/575
