@@ -11,12 +11,22 @@ MSA는 작은 기능별로 서비스를 잘게 쪼개어 개발하는 형태를 
 작은 micro service의 긴밀한 동작 테스트도 중요해진다.
 그러한 상황에서 CI의 적용은 기능 충돌 방지 등의 Benefit을 제공할 수 있다.
 
-
 이러한 CI의 핵심목표는 버그를 신속하게 찾아 해결하고,
 소프트웨어의 품질을 개선하고,
 새로운 업데이트의 검증 및 릴리즈의 시간을 단축시키는 것에 있다.
 
 ## CD
+CD(Continuous Delivery & Continuous Deployment)는 지속적인 서비스 제공 혹은 지속적인 베포라는 의미이다.
+
+Continuous Delivery는 공유 레포지토리로 자동으로 Release 하는 것,
+Continuous Deployment는 Production 레벨까지 자동으로 deploy 하는 것을 의미한다.
+정리하자면, CI가 새로운 소스코드의 빌드, 테스트, 병합까지를 의미하였는데,
+CD는 개발자의 변경 사항이 레포지토리를 넘어, 고객의 프로덕션(Production) 환경까지 릴리즈 되는 것을 의미합니다.
+
+CI에서 예로 든 MSA와 같은 환경에서 Agile 방법론이 적용될 경우,
+서비스의 사용자는 최대한 빠른 시간 내에 최신 버전의 Production을 제공받을 필요가 있다.
+이 때, 소프트웨어가 언제든지 신뢰 가능한 수준의 버전을 유지할 수 있도록 support 하는 것이 CD라고 할 수 있다.
+
 
 ## Reference
 https://artist-developer.tistory.com/24
