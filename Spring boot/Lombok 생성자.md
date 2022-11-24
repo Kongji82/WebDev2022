@@ -3,7 +3,7 @@ Lombok(롬복)은 Java 라이브러리로 반복되는 getter, setter, toString 
 Spring boot를 사용하면서 가장 헷갈렸던 생성자 자동생성 어노테이션인 NoArgsConstructor/ RequiredArgsConsturctor/ AllArgsConstructor를 정리할려고 합니다.
 
 ## NoArgsConstructor/ RequiredArgsConsturctor/ AllArgsConstructor
-생성자를 자동으로 생성해주는 어노테이션
+Lombok에서 생성자를 자동으로 생성해주는 어노테이션
 
 
 ## NoArgsConstructor
@@ -36,7 +36,7 @@ public class Lombok {
 ```
 
 
-## RequireArgsConsturctor
+## RequireArgsConstructor
 이 애노테이션은 추가 작업을 필요로 하는 필드에 대한 생성자를 생성하는 애노테이션입니다.
 
 초기화 되지 않은 모든 final 필드, @NonNull로 마크돼있는 모든 필드들에 대한 생성자를 자동으로 생성해줍니다.
@@ -77,7 +77,7 @@ public class Lombok {
 final 변수와 @NonNull 마크 변수에 해당하는 생성자가 생성된 것을 보실 수 있습니다.
 
 그리고 null-check 로직이 자동적으로 생성된 것도 보실 수 있습니다.
-## AllArgsConsturctor
+## AllArgsConstructor
 이 애노테이션은 클래스에 존재하는 모든 필드에 대한 생성자를 자동으로 생성해줍니다.
 
 만약 필드중에서 @NonNull 애노테이션이 마크되어 있다면 생성자 내에서 null-check 로직을 자동적으로 생성해줍니다.
@@ -114,6 +114,11 @@ public class Lombok {
 ```
 모든 필드를 가진 생성자를 자동으로 생성해주는 것을 볼 수 있습니다.
 
+| | |
+| --- | --- |
+| @NoArgsConstructor | 파라미터가 없는 기본 생성자를 생성 |
+| @RequireArgsConstructor | 모든 필드 값을 파라미터로 받는 생성자를 만듦 |
+| @AllArgsConstructor | final이나 @NonNull인 필드 값만 파라미터로 받는 생성자 만듦 |
 ## Reference
 https://dingue.tistory.com/14  
 https://projectlombok.org/features/constructor
