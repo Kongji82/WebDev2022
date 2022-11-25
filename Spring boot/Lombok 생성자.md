@@ -105,7 +105,7 @@ public class Lombok {
         if (three == null){
             throw new NullPointException("three is marked non-null but is null");
         } else {
-            this.one = one;
+            this.one = one;∑
             this.two = two;
             this.three = three;
         }
