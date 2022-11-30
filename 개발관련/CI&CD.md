@@ -28,5 +28,13 @@ CI에서 예로 든 MSA와 같은 환경에서 Agile 방법론이 적용될 경�
 이 때, 소프트웨어가 언제든지 신뢰 가능한 수준의 버전을 유지할 수 있도록 support 하는 것이 CD라고 할 수 있다.
 
 
+## DevOps 목적
+- 지속적 통합
+- 지속적 전달
+- 마이크로 서비스
+- 코드형 인프라
+- 모니터링 및 로깅
+- 커뮤니케이션 및 협업
+
 ## Reference
 https://artist-developer.tistory.com/24
