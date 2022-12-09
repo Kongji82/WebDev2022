@@ -24,20 +24,13 @@ REST API는 URL, Method등을 조합하기 때문에 다양한 Endpoint가 존�
 ![GraphQL 쿼리문, 응답 데이터](https://tech.kakao.com/files/graphql-example.png)
 GraphQL 쿼리문(좌측), 응답 데이터 형식(우측)
  
+### 쿼리뮤테이션(query/mutation)
 GraphQL에서는 쿼리와 뮤테이션을 나눕니다. 
 쿼리는 데이터를 읽는데 사용하고, 뮤테이션은 데이터를 변조 하는데 사용합니다.
 
 
 
-### 쿼리뮤테이션(query/mutation)
-
-### 스키마/타입(schema/type)
-
-### 리졸버(resolver)
-
-### 인트로스펙션(introspection)
-
-
 ## Reference
 https://www.redhat.com/ko/topics/api/what-is-graphql
 https://www.redhat.com/ko/topics/api/what-is-graphql
+https://graphql-kr.github.io/
